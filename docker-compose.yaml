@@ -69,3 +69,10 @@ services:
     depends_on:
       electro-config-service:
         condition: service_healthy
+  front-electro-app:
+    build: ./electro-app-front
+    container_name: electro-app-front
+    ports:
+      - '80:80'
+    expose:
+      - '80'
